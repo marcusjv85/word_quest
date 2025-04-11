@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Global User-Select Settings
+   ========================================================================== */
+   .container,
+   .grid,
+   .cell,
+   .letter {
+     -webkit-user-select: none; /* Chrome/Safari */
+     -moz-user-select: none;    /* Firefox */
+     -ms-user-select: none;     /* older IE/Edge */
+     user-select: none;         /* Standard */
+   }
+   
+   /* ==========================================================================
+      Container & Layout
+      ========================================================================== */
+   .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     max-width: 800px;
+     margin: 20px auto;
+     padding: 20px;
+     /* background-color: #fafafa; */
+     border-radius: 8px;
+   }
+   
+   /* Title */
+   .container h1 {
+     font-family: 'Fredoka One', cursive;
+     margin-bottom: 10px;
+     font-size: 2rem;
+     color: #fff;
+     /* color: #282c34; */
+   }
+   
+   /* Instructions */
+   .instructions {
+     font-size: 1rem;
+     color: #fff;
+     /* color: #555; */
+     margin-bottom: 20px;
+   }
+   
+   /* Timer Styling */
+   .timer {
+     font-size: 1.2rem;
+     margin-bottom: 20px;
+     /* color: #282c34; */
+     color: #fff;
+   }
+   
+   /* Button Styling */
+   button {
+     padding: 10px 20px;
+     font-size: 1rem;
+     background-color: #646cff;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     color: #fff;
+     margin-bottom: 20px;
+     transition: background-color 0.2s ease;
+   }
+   
+   button:hover {
+     background-color: #48a278;
+   }
+   
+   /* ==========================================================================
+      Grid & Cells
+      ========================================================================== */
+   .grid {
+     position: relative; /* Required for absolute positioning of found lines */
+     display: grid;
+     grid-template-columns: repeat(10, 40px);
+     grid-template-rows: repeat(10, 40px);
+     gap: 2px;
+     margin-bottom: 20px;
+   }
+   
+   .cell {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     /* border: 1px solid #ccc; */
+     background-color: #fff;
+     transition: background-color 0.2s ease;
+     cursor: pointer;
+   }
+   
+   .cell:hover {
+     background-color: #eee;
+   }
+   
+   .letter {
+     margin: 0;
+     font-size: 1.2rem;
+   }
+   
+   /* Found Word Line Overlay */
+   .found-line {
+     pointer-events: none; /* So it doesn't block mouse events */
+     border-radius: 3px;
+   }
+   
+   /* ==========================================================================
+      Game Area Layout (Grid & Word List)
+      ========================================================================== */
+   .game-area {
+     display: flex;
+     gap: 2rem;
+     align-items: flex-start;
+     width: 100%;
+     max-width: 1200px;
+     margin: 20px auto;
+   }
+   .main-border{
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+   }
+   
+   .main-panel {
+     flex: 1;
+   }
+   
+   .side-panel {
+     width: 250px; /* Adjust as needed */
+   }
+   
+   .side-panel h3 {
+     margin-bottom: 10px;
+     font-size: 1.2rem;
+     /* color: #282c34; */
+     color: #fff;
+   }
+   
+   .word-list {
+     width: 100%;
+     text-align: left;
+     list-style: none;
+     padding: 0;
+   }
+   
+   .word-list li {
+     font-size: 1rem;
+     margin: 5px 0;
+     transition: color 0.2s ease;
+   }
+   
+   .word-list li.found {
+     text-decoration: line-through;
+     opacity: 0.7;
+     color: gray;
+   }
+   
+   /* ==========================================================================
+      Theme Dropdown
+      ========================================================================== */
+   .theme-selector {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     margin-bottom: 20px;
+   }
+   
+   .theme-label {
+     font-weight: bold;
+     font-size: 1rem;
+     /* color: #333; */
+     color: #fff;
+   }
+   
+   .theme-dropdown {
+     padding: 6px 12px;
+     font-size: 1rem;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     background-color: #555; /* or #f8f8f8 */
+     cursor: pointer;
+     outline: none;
+     transition: box-shadow 0.2s ease;
+   }
+   
+   .theme-dropdown:focus {
+     box-shadow: 0 0 3px rgba(0, 150, 255, 0.5); /* Light focus highlight */
+   }
+   
+   .theme-dropdown:hover {
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+   }
+   
+   /* ==========================================================================
+      Media Queries
+      ========================================================================== */
+   @media (max-width: 600px) {
+     .grid {
+       grid-template-columns: repeat(10, 30px);
+       grid-template-rows: repeat(10, 30px);
+     }
+     .letter {
+       font-size: 1rem;
+     }
+     .container {
+       padding: 10px;
+     }
+     button {
+       font-size: 0.9rem;
+     }
+   }
+   
