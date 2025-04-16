@@ -1,4 +1,4 @@
-# Word Quest
+# Word Quest (Work In Progress)
 
 **Word Quest** is a responsive, web-based word search puzzle game built with React. It features a dynamic 10×10 grid with randomly placed words, smooth drag selection with a sleek overlay line for found words, and themed word lists loaded from a configurable JSON file.
 
@@ -47,14 +47,14 @@
 
 ## Customizing Word Categories
 The game loads word categories from a JSON file named `words.json`. The file follows this format:
-    ```json
-      
+   ```json       
       {
     "animals": ["CAT", "DOG", "HORSE", "TIGER", "LION", ...],
     "foods": ["APPLE", "BANANA", "PIZZA", "PASTA", "SUSHI", ...],
     "holiday": ["CHRISTMAS", "EASTER", "HALLOWEEN", "NEWYEAR", "VALENTINE", ...],
     "countries": ["USA", "CHINA", "INDIA", "JAPAN", "RUSSIA", ...]
       }
+   ```
       
 ### To add or modify categories:
 
@@ -62,7 +62,7 @@ The game loads word categories from a JSON file named `words.json`. The file fol
 
   2. Save your changes.
 
-Restart the app—the new or updated category will appear in the dropdown selector
+Restart the app, the new or updated category will appear in the dropdown selector
 ### Contributing
 Contributions, bug reports, or feature suggestions are welcome! Please feel free to open an issue or submit a pull request. For major changes, it’s best to discuss them in an issue first.
 
